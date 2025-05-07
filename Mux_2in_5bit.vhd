@@ -10,7 +10,7 @@ entity Mux2_5 is
     -- input
     input_1    : in std_logic_vector(n - 1 downto 0);
     input_2    : in std_logic_vector(n - 1 downto 0);
-    mux_select : in std_logic;
+    sel : in std_logic;
 
     -- output
     output     : out std_logic_vector(n - 1 downto 0)
@@ -19,7 +19,7 @@ end Mux2_5;
 
 architecture Behavioral of Mux2_5 is
 begin
-  with mux_select select
+  with sel select
     output <= input_1 when '0',
               input_2 when others;
 
