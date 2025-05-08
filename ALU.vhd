@@ -44,7 +44,8 @@ begin
     -- Default
     (others => '0');
 
-  zero <= '1' when temp = (others => '0') else '0';
-  result <= temp;
+ 	zero <= '1' when temp <= "00000000000000000000000000000000" else '0';
+  	result <= temp;
+
 
 end Behavioral;
